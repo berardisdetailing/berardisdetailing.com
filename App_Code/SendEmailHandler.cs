@@ -34,7 +34,7 @@ public class SendEmailHandler : IHttpHandler
 			string contactEmail = context.Request.Form["contact-email"];
 
 			message.To.Add(new MailAddress(WebConfigurationManager.AppSettings["InfoEmail"], "Berardi's Detailing"));
-			message.To.Add(new MailAddress(contactEmail, contactName));
+			//message.To.Add(new MailAddress(contactEmail, contactName));
 			message.From = new MailAddress(WebConfigurationManager.AppSettings["NoReplyEmail"], "Berardi's Detailing No Reply");
 			message.ReplyTo = new MailAddress(contactEmail, contactName);
 
